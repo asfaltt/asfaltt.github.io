@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Şifre ile Giriş</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #371941;
+        }
+        .login-container {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #a82b2b;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+        h2{
+            color: #371941;
+        }
+        
+        
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Şifre ile Giriş</h2>
+    <form id="loginForm" onsubmit="return checkPassword()">
+        <input type="password" id="password" placeholder="Şifre" required>
+        <button type="submit">Giriş Yap</button>
+    </form>
+    <p id="message" style="color: red;"></p>
+</div>
+
+<script>
+    function checkPassword() {
+        const password = document.getElementById('password').value;
+        const correctPassword = '0321'; // Buraya doğru şifreyi yaz
+
+        if (password === correctPassword) {
+            alert('Giriş başarılı!');
+            window.location.href = 'index.html'; // Aynı klasördeki index.html'e yönlendir
+            return false; // Formun gönderilmesini engelle
+        } else {
+            document.getElementById('message').innerText = 'Hatalı şifre, lütfen tekrar deneyin.';
+            return false; // Formun gönderilmesini engelle
+        }
+    }
+</script>
+
+</body>
+</html>
