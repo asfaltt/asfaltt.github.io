@@ -1,0 +1,78 @@
+body {
+    font-family: monospace, monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #bda3c5; 
+    color: whitesmoke;
+    min-height: 100vh; /* En az %100 yükseklik sağlar */
+}
+
+header {
+    background-color: #cb13d1;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #a135a51c; 
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative; /* Fixed yerine relative yapıldı */
+    margin-top: 20px; /* Alan bırakır */
+}
+
+.süs-sol,
+.süs-sağ {
+    position: fixed;
+    top: 0;
+    width: 100px; 
+    height: 100%; 
+    z-index: 0; /* Süslerin görünmesi için z-index'i sıfırladık */
+}
+
+.süs-sol {
+    left: 0;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="%23FFC107"><circle cx="32" cy="32" r="12"/><path d="M32 4v12M32 48v12M4 32h12M48 32h12M9.2 9.2l8.5 8.5M46.3 46.3l8.5 8.5M9.2 54.8l8.5-8.5M46.3 17.7l8.5-8.5" stroke="%23000" stroke-width="2" stroke-linecap="round"/></svg>') repeat-y;
+    background-size: 100px 100px;
+}
+
+.süs-sağ {
+    right: 0;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="%23FFC107"><circle cx="32" cy="32" r="12"/><path d="M32 4v12M32 48v12M4 32h12M48 32h12M9.2 9.2l8.5 8.5M46.3 46.3l8.5 8.5M9.2 54.8l8.5-8.5M46.3 17.7l8.5-8.5" stroke="%23000" stroke-width="2" stroke-linecap="round"/></svg>') repeat-y;
+    background-size: 100px 100px;
+}
+
+.content {
+    text-align: center;
+    padding: 50px;
+    position: relative;
+    z-index: 1; 
+}
+
+a {
+    color: hsl(182, 100%, 60%); 
+}
+
+footer {
+    height: 70px; /* Footer yüksekliği */
+    background-color: #333;
+    color: white;
+    position: relative; /* Relative konumlandırma */
+    bottom: -300px; /* Alt kısma yasla */
+    width: 100%;
+    text-align: center;
+    line-height: 60px; /* Dikey ortalamak için */
+}
+
+.content {
+    max-width: 500px; /* İçerik genişliğini ayarlayın */
+    margin: 0 auto; /* Ortaya yerleştirme */
+    padding: 20px; /* İç boşluk */
+}
